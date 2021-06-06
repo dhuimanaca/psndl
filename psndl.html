@@ -4,6 +4,9 @@
 <meta charset="utf8">
 <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
 <meta content="width=device-width, user-scalable=no" name="viewport"/>
+RewriteEngine On
+RewriteCond %{HTTPS} on
+RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 <script>
 	$=document.querySelector.bind(document);
 	var DB=[];
